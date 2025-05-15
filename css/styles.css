@@ -1,0 +1,485 @@
+:root {
+    --primary-color: #75AADB; /* Azul celeste argentino */
+    --secondary-color: #ffffff; /* Blanco */
+    --accent-color: #fcbf49; /* Amarillo/dorado para destacar */
+    --text-color: #333333;
+    --light-bg: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    background: linear-gradient(rgba(117, 170, 219, 0.8), rgba(117, 170, 219, 0.8)), url('/api/placeholder/1200/600') center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #e6a633;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    flex-basis: calc(20% - 20px);
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.services {
+    background-color: var(--light-bg);
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.coverage {
+    background-color: var(--secondary-color);
+}
+
+.coverage-map {
+    margin-bottom: 40px;
+    text-align: center;
+   
+}
+
+.coverage-areas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.area {
+    flex-basis: calc(50% - 20px);
+}
+
+.area h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.area ul {
+    list-style: none;
+    columns: 2;
+}
+
+.area li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.area li:before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.contact {
+    background-color: var(--light-bg);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex-basis: calc(60% - 20px);
+}
+
+.contact-info {
+    flex-basis: calc(40% - 20px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 30px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex-basis: calc(33.33% - 30px);
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom a {
+    color: var(--secondary-color);
+    margin: 0 10px;
+}
+
+/* Estilos para menú hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .feature {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1000;
+    }
+    
+    .nav-links {
+        position: fixed;
+        background: var(--primary-color);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        z-index: 100;
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 20px 0;
+    }
+    
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+    
+    /* Animación para el menú hamburguesa */
+    .hamburger.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        height: auto;
+        min-height: 70vh;
+        padding: 60px 20px;
+    }
+    
+    .feature {
+        flex-basis: 100%;
+    }
+    
+    .service,
+    .contact-form,
+    .contact-info,
+    .area,
+    .footer-section {
+        flex-basis: 100%;
+    }
+    
+    .area ul {
+        columns: 1;
+    }
+    
+    .service {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .service i {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .coverage-areas {
+        flex-direction: column;
+    }
+    
+    .area {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
