@@ -40,61 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Función para validar y enviar el formulario de contacto
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validación básica del formulario
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const phone = document.getElementById('phone');
-            const message = document.getElementById('message');
-            
-            if (name.value.trim() === '' || email.value.trim() === '' || phone.value.trim() === '' || message.value.trim() === '') {
-                alert('Por favor, completa todos los campos del formulario.');
-                return;
-            }
-            
-            // Validación simple de email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value)) {
-                alert('Por favor, ingresa un correo electrónico válido.');
-                return;
-            }
-            
-            // Recopilar datos del formulario
-            const formData = {
-                name: name.value,
-                email: email.value,
-                phone: phone.value,
-                message: message.value
-            };
-            
-            // Enviar datos mediante fetch API
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-                    form.reset();
-                } else {
-                    alert('Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.');
-            });
-        });
-    }
     
     // Añadir efectos de scroll para mostrar/ocultar elementos
     const handleScroll = () => {
